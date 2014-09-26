@@ -1,0 +1,6 @@
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year { float: left; width: 50%; font-size: 0.8em; border-bottom: 1px solid #999; background-position: right 15% top 50%; }
+.ui-datepicker select.ui-datepicker-month { border-right: 1px solid #999; }
+.ui-datepicker th span { font-weight: 300; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { background: #f5f5f5; }
+.ui-widget-header { background: #f5f5f5; }

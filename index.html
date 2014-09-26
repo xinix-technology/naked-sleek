@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naked Revision</title>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link type="image/x-icon" href="img/favicon.ico" rel="Shortcut icon" />
+
+    <link rel="stylesheet" href="css/naked.css">
+    <link rel="stylesheet" href="css/prettify.min.css">
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font/montserrat/stylesheet.css">
+    <link rel="stylesheet" href="css/font/open_sans/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="nav-menu">
+        <div class="wrapper">
+            <div class="row">
+                <div class="pull-left">
+
+                    <!-- BRAND -->
+                    <h1 class="brand">
+                        <a href="#">
+                            <span class="logo">
+                                <img src="img/xinix-logo.png" alt="">
+                            </span>
+                            <span>Bono Sleek</span>
+                        </a>
+                    </h1>
+                    <!-- END OF BRAND -->
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <div class="span-2 sidebar">
+                <ul class="nav">
+                    <li>
+                        <a href="#">&nbsp;&nbsp; Grid System</a>
+                    </li>
+                    <li>
+                        <a href="#">&nbsp;&nbsp; Pagination</a>
+                    </li>
+                    <!-- <li class="collapsible">
+                        <a href="#"><span class="pull-left"><i class="fa fa-database"></i></span>&nbsp;&nbsp; Database <i class="icon">+</i></a>
+                        <ul class="hide animated fadeOutUp">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user"></i>&nbsp;&nbsp;User
+                                </a>
+                            </li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="span-10 main">
+                <!-- PAGE CONTENT -->
+                <pre class="prettyprint lang-html">
+<!-- TEST COMMENT -->
+<div>
+    <ul class="pagination">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+                </pre>
+                <!-- END OF PAGE CONTENT -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="footer">
+        <p>Copyright &copy; 2014
+            <a href="http://xinix.co.id" target="blank">Xinix</a>. Some right(s) reserved.
+        </p>
+    </div> -->
+    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/prettify/prettify.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $('.main pre.prettyprint').html($('<div/>').text($('pre.prettyprint').html()).html());
+
+        prettyPrint();
+    </script>
+
+    <!-- PAGE LEVEL SCRIPT -->
+
+    <!-- END OF PAGE LEVEL SCRIPT -->
+</body>
+</html>
