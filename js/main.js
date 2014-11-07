@@ -1,61 +1,5 @@
 $(document).ready(function() {
-    'use strict';
-
-    var path = window.location.pathname.split("index.php/");
-    var secndPath = path[1];
-
-    jQuery.fn.preventDoubleSubmission = function() {
-        $(this).on('submit',function(e){
-            var $form = $(this);
-
-            if ($form.data('submitted') === true) {
-                e.preventDefault();
-                e.stopImmediatePropagation();
-            } else {
-                $form.data('submitted', true);
-            }
-        });
-
-        return this;
-    };
-
-    if (navigator.userAgent.indexOf("Firefox") !== -1){
-        if(secndPath === '' || secndPath === 'login'){
-            $('body').css('display', 'flex');
-        } else {
-            $('body').css('display', 'block');
-        }
-    }
-
-    $.fn.serializeObject = function() {
-        var object = {};
-        var array = this.serializeArray();
-        $.each(array, function() {
-            if (object[this.name] !== undefined) {
-                if (!object[this.name].push) {
-                    object[this.name] = [object[this.name]];
-                }
-                object[this.name].push(this.value || '');
-            } else {
-                object[this.name] = this.value || '';
-            }
-        });
-        return object;
-    };
-
-    Number.prototype.formatMoney = function(decPlaces, thouSeparator, decSeparator) {
-        var n = this,
-            sign = n < 0 ? "-" : "",
-            i = parseInt(n = Math.abs(+n || 0).toFixed(decPlaces)) + "",
-            j = (j = i.length) > 3 ? j % 3 : 0;
-
-        decPlaces = isNaN(decPlaces = Math.abs(decPlaces)) ? 2 : decPlaces;
-        decSeparator = decSeparator === undefined ? "." : decSeparator;
-        thouSeparator = thouSeparator === undefined ? "," : thouSeparator;
-
-        return sign + (j ? i.substr(0, j) + thouSeparator : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thouSeparator) + (decPlaces ? decSeparator + Math.abs(n - i).toFixed(decPlaces).slice(2) : "");
-    };
-
+    
     $(".alert .close").click(function() {
         $(this).parent ().addClass("hide");
     });
@@ -69,8 +13,6 @@ $(document).ready(function() {
     };
 
     $('.sidebar .nav li.collapsible').click(function (event) {
-        // event.preventDefault();
-        // event.stopImmediatePropagation();
 
         var element = $(event.target);
 
@@ -85,13 +27,42 @@ $(document).ready(function() {
             }, 600);
             $( this ).closest('.collapsible').find('a:first').removeClass('select');
         }
+        event.preventDefault();
     });
 
-    $('.user').click(function() {
+    $('.user').click(function(event) {
         $('.user .sub').toggleClass('fadeInDown');
+        event.preventDefault();
     });
-    $('.notification a').click(function() {
+    $('.notification a').click(function(event) {
         $('.notification .sub').toggleClass('fadeInDown');
+        event.preventDefault();
+    });
+
+
+    // Push object to this variable to later hide it on click outside the element
+    window.elementToHide = [];
+    // Hide element for above array
+    $("html").click (function () {
+        $.each(window.elementToHide, function (index) {
+            $(this).slideUp (100);
+        })
+    });
+
+    // User drop down menu
+    $("nav .user a").click (function () {
+        $(this).siblings (".sub").slideToggle (100);
+        window.elementToHide.push ($(this).siblings (".sub"));
+
+        return false;
+    });
+
+    // Focus on first error input
+    $("form .has-error:first input").focus ();
+
+    // Alert close 
+    $(".alert .close").click ( function () {
+        $(this).parent ().parent ().slideUp (100);
     });
 
     stylized ();
