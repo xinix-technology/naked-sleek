@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     $(".alert .close").click(function() {
         $(this).parent ().addClass("hide");
     });
@@ -60,7 +60,7 @@ $(document).ready(function() {
     // Focus on first error input
     $("form .has-error:first input").focus ();
 
-    // Alert close 
+    // Alert close
     $(".alert .close").click ( function () {
         $(this).parent ().parent ().slideUp (100);
     });
@@ -113,7 +113,9 @@ function stylized () {
     $("[class^=tablelist] tr td:nth-child(odd)").addClass ("even");
     $("[class^=tablelist] tr td:nth-child(even)").addClass ("odd");
 
-    $('form').preventDoubleSubmission();
+    if ($('form').length) {
+        $('form').preventDoubleSubmission();
+    }
 }
 
 // ================================================
