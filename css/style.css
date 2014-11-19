@@ -154,30 +154,8 @@ body.blue #footer { background: #08c; border-top: 1px solid #b1dbf9; }
     -o-border-radius: 5px;
     border-radius: 5px; 
 } 
-#popupOverflow { position:fixed; top:0; left:0; z-index:9999; display:table; width:100%; height:100%; background:rgba(0, 0, 0, 0.64) } 
 #popupOverflow { position:relative; z-index: 7; } 
-#popupMargin { display:table-cell; vertical-align:middle }
 #popupMargin { padding: 0 20px; }
-#popupContent { 
-    display:table; margin:0 auto; background-color:#fff;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    -ms-border-radius:4px;
-    -o-border-radius:4px;
-    border-radius:4px;
-}
-#popupContent .wrapper { padding: 20px; }
-#popupContent h4 { margin: 0; color: #444; }
-#popupContent h4 i { cursor: pointer; font-size: 0.7em; }
-#popupContent p { color: #666; }
-#popupContent .button-area { margin-top: 15px; }
-#popupOverflow #popupMargin #popupContent .content-area .row { margin-bottom: 10px; }
-#popupOverflow #popupMargin #popupContent .content-area .row:first-child { margin-top: 15px; }
-/*#popupOverflow #popupMargin #popupContent .content-area .row:last-child { margin-bottom: 15px; }*/
-
-
-#popupOverflow.scroll #popupMargin { padding: 20px; display: block; }
-#popupOverflow.scroll #popupMargin #popupContent { top:20px; bottom: 20px; right: 20px; left: 20px; position: absolute; display: block; overflow: auto; }
 
 
 
