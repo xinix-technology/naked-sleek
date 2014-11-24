@@ -147,15 +147,18 @@ body.blue #footer { background: #08c; border-top: 1px solid #b1dbf9; }
 
 /*================================= POPUP ===================================*/
 .popup-box { 
-    border: 1px solid #ddd; padding: 30px; background-color: #F7F7F9; height: 500px;
+    border: 1px solid #ddd; padding: 30px; background-color: #F7F7F9;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px; 
 } 
-#popupOverflow { position:relative; z-index: 7; } 
-#popupMargin { padding: 0 20px; }
+.popup-box #popupOverflow { position:relative; z-index: 7; } 
+.popup-box #popupMargin { padding: 20px; }
+.popup-box #popupOverflow #popupTable { position: relative; }
+.popup-box #popupOverflow #popupContent .content { width: 500px; }
+
 /*===========================================================================*/
 
 
